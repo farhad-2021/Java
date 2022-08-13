@@ -1,0 +1,24 @@
+// decimal to binary conversion
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,n1,rem,sum=0;
+    n1=n;
+
+    cout<<" Enter a Decimal number :";
+    cin>> n;
+    n1=n;
+ 
+    for(i=0;n1!=0;i++)
+    {
+        sum=sum+(n1%2)*pow(10,i);
+        n1=n1/2;
+
+    }
+    cout<< "Binary is :"<< sum;
+
+
+    return 0;
+}
