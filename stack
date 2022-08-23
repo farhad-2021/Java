@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define MAX 10
+int a[MAX];
+
+int top = -1;
+
+void push(int data)
+{
+
+    if(top== MAX-1)
+    {
+        cout<<("No space in array stack");
+        return ;
+    }
+    top = top +1;
+    a[top]=data;
+    
+
+}
+
+void display()
+{
+  for(int i= 0;i<=top;i++)
+  {
+      cout<< a[i]<< " " ;
+  }
+}
+
+void pop(){
+    
+    if(top== -1)
+    {
+        
+        cout<< "stack is empty";
+    }
+    
+    top= top-1;
+    
+    
+}
+
+void peek()
+{
+    if(top == -1)
+    {
+        cout<< "Stack is empty";
+    }
+    
+    top--;
+}
+
+
+int main()
+{
+    push(10);
+    push(15);
+    push(17);
+    push(18);
+    push(20);
+    display();
+    pop();
+    display();
+    peek();
+    display();
+
+
+    return 0;
+}
