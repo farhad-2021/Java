@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i,j,flag;
+
+    int a,b;
+    cout<< "Enter start value :";
+    cin>> a;
+
+    cout<< "Enter end value :";
+
+    cin>> b;
+
+    for(i=a; i<=b; i++)
+    {
+        flag =0;
+        // condition : i-1 / sqrt(i) / j<= i/2
+        for(j=2; j<= i/2; j++)
+        {
+            if(i%j==0)
+            {
+                flag=1;
+                break;
+            }
+
+
+        }
+         if(flag== 0)
+            {
+                cout<< i<< endl;
+            }
+    }
+
+
+    return 0;
+}
