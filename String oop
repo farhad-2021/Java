@@ -1,0 +1,43 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class mystring{
+string name;
+int id ;
+public:
+
+    mystring();
+    mystring(int,string);
+
+    void display();
+
+};
+
+mystring::mystring()
+{
+    id= 0;
+    name = "";
+}
+    mystring::mystring(int i, string s)
+    {
+        id=i;
+        name = s;
+    }
+
+
+void mystring:: display(){
+
+cout<< "ID is: " << id << endl;
+cout<< "Name is: " << name << endl;
+}
+
+
+int main(){
+
+    mystring ms(100,"faruk mama");
+    ms.display();
+
+
+return 0;
+}
